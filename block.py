@@ -39,7 +39,7 @@ class Block:
         shadow_color = (50, 50, 50)
         tiles = self.get_cell_positions()
         for tile in tiles:
-            tile_rect = pygame.Rect(tile.column * self.cell_size + 1, tile.row * self.cell_size + 1, self.cell_size - 1, self.cell_size - 1)
+            tile_rect = pygame.Rect(tile.column * self.cell_size + 11, tile.row * self.cell_size + 11, self.cell_size - 1, self.cell_size - 1)
             color_to_draw = shadow_color if is_shadow else self.colors[self.id]
             pygame.draw.rect(screen, color_to_draw, tile_rect)
 
