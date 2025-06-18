@@ -16,8 +16,10 @@ class Game:
         if lines_cleared == 1:
             self.score += 100
         elif lines_cleared == 2:
-            self.score += 300
+            self.score += 200
         elif lines_cleared == 3:
+            self.score += 300
+        elif lines_cleared == 4:
             self.score += 500
         self.score += move_down_points
 
@@ -118,6 +120,13 @@ class Game:
     
     def draw(self, screen):
         self.grid.draw(screen)
-        self.current_block_shadow.draw(screen, True)
-        self.current_block.draw(screen)
+        self.current_block_shadow.draw(screen, 11, 11, True)
+        self.current_block.draw(screen, 11, 11)
+
+        if self.next_block.id == 3:
+            self.next_block.draw(screen, 255, 290)
+        elif self.next_block.id == 4:
+            self.next_block.draw(screen, 255, 280)
+        else:
+            self.next_block.draw(screen, 270, 270)
         
