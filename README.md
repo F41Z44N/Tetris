@@ -1,1 +1,1 @@
-This is my first app, a tetris app. I am using this to learn pygame and get familiar with objects in coding.
+This is my first app, a tetris app. I am using this to learn pygame and get familiar with objects in coding. Will update later.

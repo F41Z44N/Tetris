@@ -25,6 +25,8 @@ game = Game()
 GAME_UPDATE = pygame.USEREVENT
 pygame.time.set_timer(GAME_UPDATE, 200)
 
+pygame.key.set_repeat(100, 50)
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -45,6 +47,7 @@ while True:
                 game.update_score(0, 1)
             if event.key == pygame.K_UP and game.game_over== False:
                 game.rotate()
+                pygame.key.set_repeat(5000, 5000)
             if event.key == pygame.K_SPACE and game.game_over== False:
                 while True:
                     game.current_block.move(1, 0)
